@@ -82,16 +82,16 @@ public class MainActivity extends AppCompatActivity {
                 int result = 0;
                 switch (v.getId()) {
                     case R.id.btnAdd:
-                        result = onAdd(Integer.valueOf(etInputOne.getText().toString()), Integer.valueOf(etInputTwo.getText().toString()));
+                        result = Addition(Integer.valueOf(etInputOne.getText().toString()), Integer.valueOf(etInputTwo.getText().toString()));
                         break;
                     case R.id.btnSubtract:
-                        result = onSubtract(Integer.valueOf(etInputOne.getText().toString()), Integer.valueOf(etInputTwo.getText().toString()));
+                        result = Subtraction(Integer.valueOf(etInputOne.getText().toString()), Integer.valueOf(etInputTwo.getText().toString()));
                         break;
                     case R.id.btnMultiply:
-                        result = onMultiply(Integer.valueOf(etInputOne.getText().toString()), Integer.valueOf(etInputTwo.getText().toString()));
+                        result = Multiplication(Integer.valueOf(etInputOne.getText().toString()), Integer.valueOf(etInputTwo.getText().toString()));
                         break;
                     case R.id.btnDivide:
-                        result = onDivide(Integer.valueOf(etInputOne.getText().toString()), Integer.valueOf(etInputTwo.getText().toString()));
+                        result = Division(Integer.valueOf(etInputOne.getText().toString()), Integer.valueOf(etInputTwo.getText().toString()));
                         break;
                 }
                 txtOutput.setText(String.valueOf(result));
@@ -125,20 +125,20 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Logic to calculate the solution.
      */
-    public int onAdd(int first, int second) {
+    public int Addition(int first, int second) {
         return first + second;
 
     }
 
-    public int onSubtract(int first, int second) {
+    public int Subtraction(int first, int second) {
         return first - second;
     }
 
-    public int onMultiply(int first, int second) {
+    public int Multiplication(int first, int second) {
         return first * second;
     }
 
-    public int onDivide(int first, int second) {
+    public int Division(int first, int second) {
         return first / second;
     }
 }

@@ -14,86 +14,87 @@ public class ExampleUnitTest {
 
 
     @Test
-    public void addTestOne() {
+    public void Addition_Input_10_10_Expected_20() {
         MainActivity obj = new MainActivity();
-        int result = obj.onAdd(10, 10);
+        int result = obj.Addition(10, 10);
         assertThat(result, is(20));
     }
 
     @Test
-    public void addTestTwo() {
+    public void Addition_Input_2500_1000_Expected_3500() {
         MainActivity obj = new MainActivity();
-        int result = obj.onAdd(-25, 10);
-        assertThat(result, is(-15));
+        int result = obj.Addition(2500, 1000);
+        assertThat(result, is(3500));
     }
 
     @Test
-    public void addTestThree() {
+    public void Addition_Input_3_negative_4_Expected_1() {
         MainActivity obj = new MainActivity();
-        int result = obj.onAdd(3, -4);
+        int result = obj.Addition(3, -4);
         assertThat(result, is(-1));
     }
 
     @Test
-    public void subtractTestOne() {
+    public void Subtraction_Input_8_8_Expected_0() {
         MainActivity obj = new MainActivity();
-        int result = obj.onSubtract(5, 10);
-        assertThat(result, is(-5));
-    }
-
-    @Test
-    public void subtractTestTwo() {
-        MainActivity obj = new MainActivity();
-        int result = obj.onSubtract(-25, 10);
-        assertThat(result, is(-35));
-    }
-
-    @Test
-    public void subtractTestThree() {
-        MainActivity obj = new MainActivity();
-        int result = obj.onSubtract(13, -4);
-        assertThat(result, is(17));
-    }
-
-    @Test
-    public void multiplyTestOne() {
-        MainActivity obj = new MainActivity();
-        int result = obj.onMultiply(-5, 10);
-        assertThat(result, is(-50));
-    }
-
-    @Test
-    public void multiplyTestTwo() {
-        MainActivity obj = new MainActivity();
-        int result = obj.onMultiply(-0, -0);
+        int result = obj.Subtraction(8, 8);
         assertThat(result, is(0));
     }
 
     @Test
-    public void multiplyTestThree() {
+    public void Subtraction_Input_5_10_Expected_negative_5() {
         MainActivity obj = new MainActivity();
-        int result = obj.onMultiply(1, -4);
-        assertThat(result, is(-4));
+        int result = obj.Subtraction(5, 10);
+        assertThat(result, is(-5));
     }
 
     @Test
-    public void divideTestOne() {
+    public void Subtraction_Input_5000_4500_Expected_500() {
         MainActivity obj = new MainActivity();
-        int result = obj.onDivide(15, 5);
+        int result = obj.Subtraction(5000, 4500);
+        assertThat(result, is(500));
+    }
+
+    @Test
+    public void Multiply_Input_10_10_Expected_100() {
+        MainActivity obj = new MainActivity();
+        int result = obj.Multiplication(10, 10);
+        assertThat(result, is(100));
+    }
+
+    @Test
+    public void Multiply_Input_negative_5_10_Expected_negative_50() {
+        MainActivity obj = new MainActivity();
+        int result = obj.Multiplication(-5, 10);
+        assertThat(result, is(-50));
+    }
+
+
+    @Test
+    public void Multiply_Input_45_0_Expected_0() {
+        MainActivity obj = new MainActivity();
+        int result = obj.Multiplication(45, 0);
+        assertThat(result, is(0));
+    }
+
+    @Test
+    public void Divide_Input_15_5_Expected_3() {
+        MainActivity obj = new MainActivity();
+        int result = obj.Division(15, 5);
         assertThat(result, is(3));
     }
 
     @Test
-    public void divideTestTwo() {
+    public void Divide_Input_9999_3333_Expected_3() {
         MainActivity obj = new MainActivity();
-        int result = obj.onDivide(3, 3);
-        assertThat(result, is(1));
+        int result = obj.Division(9999, 3333);
+        assertThat(result, is(3));
     }
 
     @Test
-    public void divideTestThree() {
+    public void Divide_Input_negative_10_2_Expected_negative_5() {
         MainActivity obj = new MainActivity();
-        int result = obj.onDivide(10, 2);
-        assertThat(result, is(5));
+        int result = obj.Division(-10, 2);
+        assertThat(result, is(-5));
     }
 }
