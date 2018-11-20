@@ -10,7 +10,7 @@ import static org.junit.Assert.assertThat;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
+public class CalculatorTest {
 
 
     @Test
